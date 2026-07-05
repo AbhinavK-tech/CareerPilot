@@ -344,15 +344,4 @@ This project is licensed under the MIT License.
 
 ---
 
-# 👨‍💻 Author
-
-**Abhinav K**
-
-B.Tech Information Technology  
-SRM Institute of Science and Technology
-
-GitHub: https://github.com/AbhinavK-tech
-
----
-
 ⭐ If you found this project useful, consider giving it a star!
