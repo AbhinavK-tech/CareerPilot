@@ -2,7 +2,6 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://abhinavk-tech.github.io/CareerPilot/",
   "type": "module",
 
   "scripts": {
