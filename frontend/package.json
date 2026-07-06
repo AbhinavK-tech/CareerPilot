@@ -3,15 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "homepage": "https://abhinavk-tech.github.io/CareerPilot/",
-  "type": "module",
 
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
-  },
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "lint": "oxlint",
+  "preview": "vite preview",
+  "deploy": "gh-pages -d dist"
+}
   
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.2",
