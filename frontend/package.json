@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "homepage": "https://abhinavk-tech.github.io/CareerPilot/",
   "type": "module",
+
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
