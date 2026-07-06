@@ -3,15 +3,27 @@
   "private": true,
   "version": "0.0.0",
   "homepage": "https://abhinavk-tech.github.io/CareerPilot/",
+  "type": "module",
 
   "scripts": {
-  "dev": "vite",
-  "build": "tsc -b && vite build",
-  "lint": "oxlint",
-  "preview": "vite preview",
-  "deploy": "gh-pages -d dist"
-}
-  
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "framer-motion": "^12.42.2",
+    "lucide-react": "^1.23.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-is": "^19.2.7",
+    "react-router-dom": "^7.18.1",
+    "recharts": "^3.9.2"
+  },
+
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.2",
     "@types/canvas-confetti": "^1.9.0",
@@ -20,6 +32,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
     "autoprefixer": "^10.5.2",
+    "gh-pages": "^6.3.0",
     "oxlint": "^1.71.0",
     "postcss": "^8.5.16",
     "tailwindcss": "^4.3.2",
