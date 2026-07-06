@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { API_URL } from '../services/api';
 import { 
   LayoutDashboard, 
   Map, 
@@ -55,7 +56,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, user, onLogout }) => {
 
   const handleDownloadReport = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/copilot/download-report', {
+      const response = await fetch(`${API_URL}/api/copilot/download-report`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }

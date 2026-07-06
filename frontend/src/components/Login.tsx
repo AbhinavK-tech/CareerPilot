@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Mail, Lock, User, Target, Clock, Zap, Loader2 } from 'lucide-react';
-import { api } from '../services/api';
+import { api, API_URL } from '../services/api';
 
 interface LoginProps {
   onLoginSuccess: (user: any) => void;
@@ -40,7 +40,7 @@ export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
       formData.append('username', email);
       formData.append('password', password);
 
-      const response = await fetch('http://localhost:8000/api/auth/token', {
+      const response = await fetch(`${API_URL}/api/auth/token`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -70,7 +70,7 @@ export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
     setError('');
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/auth/me', {
+      const response = await fetch(`${API_URL}/api/auth/me`, {
         headers: {
           'Authorization': '' 
         }

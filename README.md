@@ -310,6 +310,46 @@ Add screenshots here.
 
 ---
 
+# 🌐 Production Deployment Guide
+
+CareerPilot AI is ready for production hosting. Follow these instructions to deploy the backend to **Render** and the frontend to **Vercel**.
+
+## 1. Backend Deployment (Render)
+Render is ideal for hosting FastAPI ASGI apps.
+
+1. Sign up on [Render](https://render.com) and link your GitHub repository.
+2. Click **New +** and select **Web Service**.
+3. Choose your repository and configure the following parameters:
+   * **Language**: `Python`
+   * **Root Directory**: `backend`
+   * **Build Command**: `pip install -r requirements.txt`
+   * **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. Click **Advanced** and add the following **Environment Variables**:
+   * `DATABASE_URL`: `sqlite:///./careerpilot.db`
+   * `SECRET_KEY`: `your_secure_jwt_key_here` (Generates JWT session tokens)
+   * `ALGORITHM`: `HS256`
+   * `ACCESS_TOKEN_EXPIRE_MINUTES`: `1440`
+   * `GEMINI_API_KEY`: `your_gemini_api_key` *(If left blank, the app will run in fallback **Demo Mode**)*
+5. Click **Deploy Web Service**. Once deployed, copy your Render web service URL (e.g., `https://careerpilot-backend.onrender.com`).
+
+---
+
+## 2. Frontend Deployment (Vercel)
+Vercel is optimized for building and deploying static React/Vite web apps.
+
+1. Sign up on [Vercel](https://vercel.com) and import your GitHub repository.
+2. Configure the following project parameters:
+   * **Root Directory**: `frontend`
+   * **Build Command**: `npm run build`
+   * **Output Directory**: `dist`
+   * **Install Command**: `npm install`
+3. Expand the **Environment Variables** section and add:
+   * **Key**: `VITE_API_URL`
+   * **Value**: Paste your Render backend service URL (e.g., `https://careerpilot-backend.onrender.com`)
+4. Click **Deploy**. Vercel will build the React bundle and host it on a secure `https://` domain.
+
+---
+
 # 🎓 Kaggle AI Agents Concepts Demonstrated
 
 This project demonstrates multiple concepts from the Kaggle AI Agents course:

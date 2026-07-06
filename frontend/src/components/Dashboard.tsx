@@ -38,7 +38,7 @@ import {
   Pie,
   Cell
 } from 'recharts';
-import { api } from '../services/api';
+import { api, API_URL } from '../services/api';
 import confetti from 'canvas-confetti';
 
 interface DashboardProps {
@@ -878,7 +878,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ onRefreshUser }) => {
                   Close Preview
                 </button>
                 <a 
-                  href="http://localhost:8000/api/copilot/download-report"
+                  href={`${API_URL}/api/copilot/download-report`}
                   target="_blank"
                   rel="noreferrer"
                   className="bg-brand-teal hover:bg-brand-teal/90 text-white font-bold px-6 py-2 rounded-xl text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
