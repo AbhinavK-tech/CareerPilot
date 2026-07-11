@@ -296,20 +296,6 @@ http://localhost:5173
 
 ---
 
-# 📸 Screenshots
-
-Add screenshots here.
-
-- Dashboard
-- Resume Analyzer
-- Career Roadmap
-- Interview Coach
-- DSA Coach
-- GitHub Review
-- Multi-Agent Activity Panel
-
----
-
 # 🌐 Production Deployment Guide
 
 CareerPilot AI is ready for production hosting. Follow these instructions to deploy the backend to **Render** and the frontend to **Vercel**.
